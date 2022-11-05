@@ -1,0 +1,21 @@
+[
+  {
+    "type": "java",
+    "name": "jar (in project RapidReactV3)",
+    "extensions": [
+      {
+        "name": "Sim DriverStation",
+        "libName": "Y:\\Robots\\High School\\2022-23\\RapidReactV3\\build\\jni\\release\\halsim_ds_socket.dll",
+        "defaultEnabled": false
+      },
+      {
+        "name": "Sim GUI",
+        "libName": "Y:\\Robots\\High School\\2022-23\\RapidReactV3\\build\\jni\\release\\halsim_gui.dll",
+        "defaultEnabled": true
+      }
+    ],
+    "environment": {},
+    "libraryDir": "Y:\\Robots\\High School\\2022-23\\RapidReactV3\\build\\jni\\release",
+    "mainClassName": "frc.robot.Main"
+  }
+]
