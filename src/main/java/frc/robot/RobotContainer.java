@@ -76,7 +76,7 @@ public class RobotContainer {
     public static final JoystickButton con1StickPressRight = new JoystickButton(controller1, OIConstants.kLogiStickPressRight);
     public POVButton con1PovUp = new POVButton(controller1, 0);
     public POVButton con1PovRight = new POVButton(controller1, 90);
-    public POVButton con1PovDown= new POVButton(controller1, 180);
+    public POVButton con1PovDown = new POVButton(controller1, 180);
     public POVButton con1PovLeft = new POVButton(controller1, 270);
 
 
@@ -114,7 +114,7 @@ public class RobotContainer {
     public static final JoystickButton con5StickPressRight = new JoystickButton(controller5, OIConstants.kXboxStickPressRight);
     public POVButton con5PovUp = new POVButton(controller5, 0);
     public POVButton con5PovRight = new POVButton(controller5, 90);
-    public POVButton con5PovDown= new POVButton(controller5, 180);
+    public POVButton con5PovDown = new POVButton(controller5, 180);
     public POVButton con5PovLeft = new POVButton(controller5, 270);
 
 
