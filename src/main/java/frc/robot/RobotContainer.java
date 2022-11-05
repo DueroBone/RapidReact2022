@@ -57,7 +57,7 @@ public class RobotContainer {
     public static final JoystickButton con0StickPressRight = new JoystickButton(controller0, OIConstants.kXboxStickPressRight);
     public POVButton con0PovUp = new POVButton(controller0, 0);
     public POVButton con0PovRight = new POVButton(controller0, 90);
-    public POVButton con0PovDown= new POVButton(controller0, 180);
+    public POVButton con0PovDown = new POVButton(controller0, 180);
     public POVButton con0PovLeft = new POVButton(controller0, 270);
 
 
