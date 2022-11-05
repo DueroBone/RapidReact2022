@@ -1,21 +1,21 @@
 [
   {
     "type": "java",
-    "name": "jar (in project RapidReact2022-1)",
+    "name": "jar (in project RapidReact2022)",
     "extensions": [
       {
         "name": "Sim DriverStation",
-        "libName": "Y:\\Somthing\\Repos\\RapidReact2022-1\\build\\jni\\release\\halsim_ds_socket.dll",
+        "libName": "Y:\\Somthing\\Repos\\RapidReact2022\\build\\jni\\release\\halsim_ds_socket.dll",
         "defaultEnabled": false
       },
       {
         "name": "Sim GUI",
-        "libName": "Y:\\Somthing\\Repos\\RapidReact2022-1\\build\\jni\\release\\halsim_gui.dll",
+        "libName": "Y:\\Somthing\\Repos\\RapidReact2022\\build\\jni\\release\\halsim_gui.dll",
         "defaultEnabled": true
       }
     ],
     "environment": {},
-    "libraryDir": "Y:\\Somthing\\Repos\\RapidReact2022-1\\build\\jni\\release",
+    "libraryDir": "Y:\\Somthing\\Repos\\RapidReact2022\\build\\jni\\release",
     "mainClassName": "frc.robot.Main"
   }
 ]
