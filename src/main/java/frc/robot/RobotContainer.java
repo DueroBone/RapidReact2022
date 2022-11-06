@@ -27,6 +27,7 @@ import frc.robot.autonomous.AutoStartPos4;
 import frc.robot.Constants.OIConstants;
 import frc.robot.commands.ShooterOffCommand;
 import frc.robot.commands.ShooterOnCommand;
+import frc.robot.commands.ProximitysenseCommand;
 import frc.robot.subsystems.Delivery;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Climber;
@@ -137,10 +138,9 @@ public class RobotContainer {
 
 
   public RobotContainer() {
-    // assign default command for drive train
     m_driveTrain.setDefaultCommand(new GoTele());
     //m_driveTrain.setDefaultCommand(new DriveCommand(() -> -controller0.getLeftY(), () -> -controller0.getRightY()));
-    //m_colorSensor.setDefaultCommand(new ProximitysenseCommand());
+    m_colorSensor.setDefaultCommand(new ProximitysenseCommand());
     
     buildAutonomousCommands();    // go create autonomous commands
     configureButtonBindings();
@@ -155,7 +155,6 @@ public class RobotContainer {
     autoChooser.addOption("Auto Start Postion 3", autoStartPos3Command );
     autoChooser.addOption("Auto Start Postion 4", autoStartPos4Command );
     SmartDashboard.putData("Auto Choices", autoChooser);
-    //SmartDashboard.putNumber("Delivery Speed", );
 
     if (DriverStation.getAlliance() == Alliance.Blue) {
         allianceColor = "blue";
@@ -174,7 +173,6 @@ public class RobotContainer {
 
   private void configureButtonBindings() {
     //Main controllers
-
     con0StickPressLeft.whenPressed(() -> DriveTrain.doLowGear(false));
     con0StickPressRight.whenPressed(() -> DriveTrain.doLowGear(true));
 

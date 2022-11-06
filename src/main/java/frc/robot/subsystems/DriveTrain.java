@@ -65,8 +65,6 @@ public class DriveTrain extends SubsystemBase {
   private static int counter1 = 5; // for limiting display
   private static int counter2 = 5;
   private static int counter3 = 5;
-  private static double teleLeft = 0;
-  private static double teleRight = 0;
 
   /**
    * Creates a new DriveTrain.
@@ -242,7 +240,7 @@ public class DriveTrain extends SubsystemBase {
   }
 
   public static void resetGyro() {
-    // "Zero" yaw (whatever direction sensor is pointing now becomes new "Zero" degrees
+    // "Zero" yaw (whatever direction sensor is pointing now becomes new "Zero" degrees)
     Gyro.zeroYaw(); // yaw is only thing that can be reset, pitch and roll can't (see docs)
   }
 
@@ -256,7 +254,7 @@ public class DriveTrain extends SubsystemBase {
       leftEncoderZeroValue = 0.0;
       System.out.println("** reset left encoder successful");
     } else {
-      ticks = leftDriveEncoder.getPosition(); // get current position
+      ticks = leftDriveEncoder.getPosition();
       ticks = Math.floor(ticks * 100.0) / 100.0; // round to 2 decimal places
       leftEncoderZeroValue = ticks >= 0 ? ticks : 0; // only allow positive numbers to substracted later
       System.out.println("** ERROR reset left encoder");
@@ -316,16 +314,13 @@ public class DriveTrain extends SubsystemBase {
     }
   }
 
-  // toggle solenoid - if set forward will reverse, if set reverse will forward
-  public void toggleGearshift() {
 
-    solenoidGearShift.toggle();   // toggle solenoid
+  public void toggleGearshift() {
+    solenoidGearShift.toggle();
   }
   
   public static void stop() {
     System.out.println("**in drivetrain stop");
     doTankDrive(0.0, 0.0);
   }
-
-
 }
