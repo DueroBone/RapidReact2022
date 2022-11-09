@@ -212,7 +212,7 @@ public class RobotContainer {
     con2ButtonX.toggleWhenPressed(new StartEndCommand(() -> Intake.setSpeed(0.35), () -> Intake.stop())); //50% for upper limit
     con2ButtonY.toggleWhenPressed(new StartEndCommand(() -> Delivery.setSpeed(-0.25), () -> Delivery.stop())); //50% for upper limit 
 
-    con2BumperLeft.whileHeld(() -> Delivery.setSpeed(-0.25));
+    con2BumperLeft.whileHeld(() -> Delivery.setSpeed(-0.35));
     con2BumperLeft.whileHeld(() -> Intake.setSpeed(0.35));
     con2BumperLeft.whileHeld(() -> Shooter.setSpeed(-0.15));
     con2BumperLeft.whenReleased(() -> Delivery.stop());

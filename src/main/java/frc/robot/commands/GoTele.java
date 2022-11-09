@@ -32,7 +32,7 @@ public class GoTele extends CommandBase {
         teleRight = RobotContainer.controller0.getRightY();
       }
       else {
-        if (RobotContainer.controller2.isConnected() && (RobotContainer.controller2.getLeftY() != 0 || RobotContainer.controller2.getRightY() != 0)) {
+        if (RobotContainer.controller2.isConnected() && RobotContainer.controller2.getLeftY() != 0 || RobotContainer.controller2.getRightY() != 0) {
           //Using one controller
           teleLeft = RobotContainer.controller2.getLeftY();
           teleRight = RobotContainer.controller2.getRightY();
@@ -51,9 +51,10 @@ public class GoTele extends CommandBase {
           }
         }
       }
+      teleLeft = teleLeft * -1;
+      teleRight = teleRight * -1;
       DriveCommand dcObj = new DriveCommand(() -> teleLeft, () -> teleRight);
       dcObj.execute();
-
       SmartDashboard.putNumber("Left Drive Speed", teleLeft);
       SmartDashboard.putNumber("Right Drive Speed", teleRight);
     }
