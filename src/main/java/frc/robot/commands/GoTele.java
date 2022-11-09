@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 import frc.robot.subsystems.DriveTrain;
-//import frc.robot.commands.DriveCommand;
+import frc.robot.commands.DriveCommand;
 
 public class GoTele extends CommandBase {
     @Override
@@ -41,9 +41,9 @@ public class GoTele extends CommandBase {
           if (RobotContainer.controller5.isConnected() && (RobotContainer.controller5.getLeftY() != 0 || RobotContainer.controller5.getRightY() != 0)) {
             //Using the guest controller
             teleLeft = RobotContainer.controller5.getLeftY();
-            teleLeft = teleLeft * 0.25;
+            teleLeft = teleLeft * 0.5;
             teleRight = RobotContainer.controller5.getRightY();
-            teleRight = teleRight * 0.25;
+            teleRight = teleRight * 0.5;
           }
           else {
             teleLeft = 0;
@@ -51,7 +51,9 @@ public class GoTele extends CommandBase {
           }
         }
       }
-      new DriveCommand(() -> teleLeft, () -> teleRight);
+      DriveCommand dcObj = new DriveCommand(() -> teleLeft, () -> teleRight);
+      dcObj.execute();
+
       SmartDashboard.putNumber("Left Drive Speed", teleLeft);
       SmartDashboard.putNumber("Right Drive Speed", teleRight);
     }

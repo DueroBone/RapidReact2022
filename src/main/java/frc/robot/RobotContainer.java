@@ -82,7 +82,7 @@ public class RobotContainer {
 
 
     //Controller #2 | Full driver
-    public static final XboxController controller2 = new XboxController(3);
+    public static final XboxController controller2 = new XboxController(2);
 
     public static final JoystickButton con2ButtonA = new JoystickButton(controller2, OIConstants.kXboxButtonA);
     public static final JoystickButton con2ButtonB = new JoystickButton(controller2, OIConstants.kXboxButtonB);
@@ -101,7 +101,7 @@ public class RobotContainer {
 
 
     //Controller #5 | Guest driver
-    public static final XboxController controller5 = new XboxController(0);
+    public static final XboxController controller5 = new XboxController(5);
 
     public static final JoystickButton con5ButtonA = new JoystickButton(controller5, OIConstants.kXboxButtonA);
     public static final JoystickButton con5ButtonB = new JoystickButton(controller5, OIConstants.kXboxButtonB);
@@ -140,6 +140,7 @@ public class RobotContainer {
   public RobotContainer() {
     m_driveTrain.setDefaultCommand(new GoTele());
     //m_driveTrain.setDefaultCommand(new DriveCommand(() -> -controller0.getLeftY(), () -> -controller0.getRightY()));
+    
     m_colorSensor.setDefaultCommand(new ProximitysenseCommand());
     
     buildAutonomousCommands();    // go create autonomous commands

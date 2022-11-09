@@ -56,7 +56,7 @@ public class Proximitysense extends SubsystemBase {
 
     double shooterVelocity = Shooter.getVelocity();
     //System.out.println("velocity: " + shooterVelocity);
-    if (proximity > 1000 && Math.abs(shooterVelocity) < 25) {
+    if (proximity > 1000 && Math.abs(shooterVelocity) < 5) {
       Delivery.stop();    // stop delivery if reading > 1800, means ball is under sensor
     }
 
