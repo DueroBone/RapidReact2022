@@ -38,7 +38,7 @@ public class GoTele extends CommandBase {
         teleRight = RobotContainer.controller0.getRightY();
       }
       else {
-        if (RobotContainer.controller2.isConnected() &&usingCon2) {
+        if (RobotContainer.controller2.isConnected() && usingCon2) {
           //Using one controller
           teleLeft = RobotContainer.controller2.getLeftY();
           teleRight = RobotContainer.controller2.getRightY();
