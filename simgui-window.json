@@ -7,7 +7,7 @@
       "userScale": "2",
       "width": "1366",
       "xpos": "0",
-      "ypos": "23"
+      "ypos": "29"
     }
   },
   "Window": {
@@ -33,7 +33,7 @@
     },
     "###Other Devices": {
       "Collapsed": "0",
-      "Pos": "1048,17",
+      "Pos": "1194,31",
       "Size": "312,868"
     },
     "###System Joysticks": {
