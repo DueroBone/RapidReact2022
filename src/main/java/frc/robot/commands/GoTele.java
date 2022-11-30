@@ -27,12 +27,15 @@ public class GoTele extends CommandBase {
     @Override
     public void execute() {
       DriveCommand dcObj = new DriveCommand(() -> teleLeft, () -> teleRight);
-      boolean usingCon0 = RobotContainer.controller0.getLeftY() != 0 || RobotContainer.controller0.getRightY() != 0;
-      boolean usingCon2 = RobotContainer.controller2.getLeftY() != 0 || RobotContainer.controller2.getRightY() != 0;
-      boolean usingCon5 = RobotContainer.controller5.getLeftY() != 0 || RobotContainer.controller5.getRightY() != 0;
+      double deadzone = 0.1;
+      boolean usingCon0 = Math.abs(RobotContainer.controller0.getLeftY()) < deadzone || Math.abs(RobotContainer.controller0.getRightY()) < deadzone;
+      boolean usingCon2 = Math.abs(RobotContainer.controller2.getLeftY()) < deadzone || Math.abs(RobotContainer.controller2.getRightY()) < deadzone;
+      boolean usingCon5 = Math.abs(RobotContainer.controller5.getLeftY()) < deadzone || Math.abs(RobotContainer.controller5.getRightY()) < deadzone;
       double teleLeft = 0;
       double teleRight = 0;
-    if (RobotContainer.controller0.isConnected() && usingCon0) {
+      System.out.print(usingCon0);
+      //System.out.println(RobotContainer.controller0.getLeftY());
+      if (RobotContainer.controller0.isConnected() && usingCon0) {
         //Using two controllers
         teleLeft = RobotContainer.controller0.getLeftY();
         teleRight = RobotContainer.controller0.getRightY();
